@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Riteshh Sharma — Senior Software Engineer · React, Next.js, TypeScript Expert | Bengaluru</title>
+<meta name="description" content="Riteshh Sharma is a Senior Software Engineer in Bengaluru with 10+ years architecting enterprise frontends — React, Next.js, TypeScript, GraphQL. Currently MTS-1 at eBay. Shipped ISPM (Saviynt, RSA 2025), AI ad platforms (ZEE5), fleet intelligence (Spireon)." />
+<meta name="keywords" content="Riteshh Sharma, Senior Software Engineer, React Developer Bengaluru, Next.js Expert, TypeScript, GraphQL, Frontend Architect, AI Engineer, Saviynt ISPM, ZEE5" />
+<meta name="author" content="Riteshh Sharma" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="profile" />
+<meta property="og:title" content="Riteshh Sharma — Senior Software Engineer" />
+<meta property="og:description" content="10+ years architecting enterprise frontends. React · Next.js · TypeScript · GraphQL · AI-powered products." />
+<meta property="og:locale" content="en_IN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Riteshh Sharma — Senior Software Engineer" />
+<meta name="twitter:description" content="10+ years architecting enterprise frontends. React · Next.js · TypeScript · GraphQL." />
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Riteshh Sharma",
+  "jobTitle":"Senior Software Engineer",
+  "address":{"@type":"PostalAddress","addressLocality":"Bengaluru","addressCountry":"IN"},
+  "email":"mailto:ritesku3@gmail.com",
+  "sameAs":["https://www.linkedin.com/in/riteshh-kumar03/"],
+  "alumniOf":{"@type":"CollegeOrUniversity","name":"Lovely Professional University"},
+  "knowsAbout":["React","Next.js","TypeScript","GraphQL","Node.js","Material-UI","Redux","Web Accessibility","Design Systems","AI-assisted Development","Frontend Architecture","Core Web Vitals","Apache Superset","React Testing Library","Electron","Claude Code","MCP","Playwright"],
+  "worksFor":{"@type":"Organization","name":"eBay"},
+  "description":"Senior Software Engineer with 10+ years architecting enterprise-scale frontends: identity security (Saviynt ISPM), AI advertising platforms (ZEE5), fleet intelligence (Spireon), aviation ops (Honeywell/HARMAN)."
+}
+</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23121210'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-style='italic' font-size='50' fill='%23e8b380' text-anchor='middle'%3ERs%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#121210;
+  --bg2:#171714;
+  --ink:#f2ede3;
+  --dim:#93908a;
+  --line:rgba(242,237,227,.12);
+  --line2:rgba(242,237,227,.06);
+  --acc:#e8b380;        /* champagne copper */
+  --acc2:#c88a52;
+  --card:#1b1b17;
+  --ok:#9ec98f;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{overflow-x:hidden;overflow-x:clip}
+body{background:var(--bg);color:var(--ink);font-family:'Space Grotesk','Segoe UI',system-ui,sans-serif;line-height:1.65;overflow-x:hidden;overflow-x:clip}
+::selection{background:var(--acc);color:#121210}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;background:none;border:none;color:inherit}
+img{max-width:100%}
+.serif{font-family:'Fraunces',Georgia,serif}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:4px}
+
+/* film grain */
+body::after{content:'';position:fixed;inset:-100%;z-index:400;pointer-events:none;opacity:.05;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  animation:grain 9s steps(8) infinite}
+@keyframes grain{0%,100%{transform:translate(0,0)}25%{transform:translate(-4%,3%)}50%{transform:translate(3%,-5%)}75%{transform:translate(-2%,4%)}}
+
+/* ambient warm light */
+.glow{position:fixed;pointer-events:none;z-index:0;border-radius:50%;filter:blur(120px);opacity:.35}
+.g1{width:55vw;height:55vw;background:radial-gradient(circle,#3a2c1c,transparent 65%);top:-20vw;right:-15vw}
+.g2{width:45vw;height:45vw;background:radial-gradient(circle,#232c1e,transparent 65%);bottom:-18vw;left:-14vw}
+
+/* ---------- preloader ---------- */
+#veil{position:fixed;inset:0;z-index:1000;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;transition:opacity .8s ease .1s,visibility .8s .1s}
+#veil.gone{opacity:0;visibility:hidden}
+#veil .vr{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(2.4rem,6vw,4.4rem);color:var(--ink);overflow:hidden;height:1.25em;display:flex;align-items:center}
+#veil .vr span{display:block;animation:vwords 2.1s cubic-bezier(.7,0,.2,1) forwards}
+@keyframes vwords{0%{transform:translateY(0)}30%{transform:translateY(-1.25em)}60%{transform:translateY(-2.5em)}90%,100%{transform:translateY(-3.75em)}}
+#veil .vr b{display:block;height:1.25em;font-weight:400}
+#veil .vc{font-family:'JetBrains Mono',monospace;color:var(--dim);font-size:.75rem;letter-spacing:3px}
+
+/* ---------- cursor (desktop) ---------- */
+#cdot{position:fixed;top:0;left:0;width:10px;height:10px;border-radius:50%;background:var(--acc);z-index:900;pointer-events:none;translate:-50% -50%;transition:width .25s,height .25s,opacity .25s;mix-blend-mode:exclusion}
+#cdot.grow{width:64px;height:64px}
+@media(hover:none){#cdot{display:none}}
+
+/* ---------- header ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;justify-content:space-between;align-items:center;padding:22px clamp(20px,5vw,70px);transition:background .4s,padding .4s,border .4s}
+header.solid{background:rgba(18,18,16,.82);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid var(--line2);padding:14px clamp(20px,5vw,70px)}
+.wordmark{font-family:'Fraunces',serif;font-style:italic;font-size:1.35rem;color:var(--ink)}
+.wordmark i{color:var(--acc);font-style:italic}
+.hnav{display:flex;gap:34px;align-items:center}
+.hnav>a{font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);position:relative;transition:color .3s}
+.hnav>a::after{content:'';position:absolute;left:0;bottom:-5px;height:1px;width:100%;background:var(--acc);transform:scaleX(0);transform-origin:right;transition:transform .35s cubic-bezier(.7,0,.2,1)}
+.hnav>a:hover{color:var(--ink)}
+.hnav>a:hover::after{transform:scaleX(1);transform-origin:left}
+.avail{display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.12em;color:var(--ok);border:1px solid rgba(158,201,143,.3);padding:8px 14px;border-radius:100px}
+.avail::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 10px var(--ok);animation:blink 2s infinite}
+@keyframes blink{50%{opacity:.3}}
+.mb{display:none;flex-direction:column;gap:5px;padding:10px;z-index:320}
+.mb span{width:26px;height:1.5px;background:var(--ink);transition:.3s}
+.mb.x span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.mb.x span:nth-child(2){opacity:0}
+.mb.x span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+@media(max-width:900px){.hnav{display:none}.mb{display:flex}}
+#mov{position:fixed;inset:0;background:var(--bg);z-index:310;display:flex;flex-direction:column;justify-content:center;padding:0 9vw;gap:6px;opacity:0;visibility:hidden;transition:.4s}
+#mov.on{opacity:1;visibility:visible}
+#mov a{font-family:'Fraunces',serif;font-size:clamp(2rem,9vw,3.4rem);border-bottom:1px solid var(--line2);padding:16px 0;display:flex;justify-content:space-between;align-items:center;opacity:0;transform:translateY(20px);transition:.45s}
+#mov.on a{opacity:1;transform:none}
+#mov a i{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--acc);font-style:normal}
+#mov a:hover{color:var(--acc);padding-left:10px}
+#mov.on a:nth-child(1){transition-delay:.06s}#mov.on a:nth-child(2){transition-delay:.12s}#mov.on a:nth-child(3){transition-delay:.18s}#mov.on a:nth-child(4){transition-delay:.24s}#mov.on a:nth-child(5){transition-delay:.3s}
+body.lock{overflow:hidden}
+
+/* ---------- shared ---------- */
+.wrap{max-width:1280px;margin:0 auto;padding-left:clamp(20px,5vw,70px);padding-right:clamp(20px,5vw,70px)}
+section{position:relative;z-index:1}
+.kicker{font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--acc);display:flex;align-items:center;gap:14px;margin-bottom:26px}
+.kicker::before{content:'';width:38px;height:1px;background:var(--acc)}
+.h2{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(2.2rem,5.6vw,4.2rem);line-height:1.06;letter-spacing:-.01em;margin-bottom:24px}
+.h2 em{font-style:italic;color:var(--acc)}
+/* line-mask reveal */
+.lm{display:block;overflow:hidden}
+.lm>span{display:block;transform:translateY(110%);transition:transform 1s cubic-bezier(.19,1,.22,1)}
+.inview .lm>span{transform:translateY(0)}
+.lm:nth-child(2)>span{transition-delay:.08s}.lm:nth-child(3)>span{transition-delay:.16s}
+/* soft rise */
+.rise{opacity:0;transform:translateY(36px);transition:opacity .9s cubic-bezier(.19,1,.22,1),transform .9s cubic-bezier(.19,1,.22,1)}
+.inview .rise,.rise.inview{opacity:1;transform:none}
+.rise.d1{transition-delay:.1s}.rise.d2{transition-delay:.2s}.rise.d3{transition-delay:.3s}
+
+/* ---------- hero ---------- */
+#hero{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-top:130px;padding-bottom:40px}
+.hero-kick{display:flex;align-items:center;gap:14px;font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--dim);margin-bottom:34px}
+.hero-kick::before{content:'';width:44px;height:1px;background:var(--acc)}
+h1{font-family:'Fraunces',serif;font-weight:350;font-size:clamp(2.7rem,7.8vw,7.2rem);line-height:1.02;letter-spacing:-.015em;max-width:1150px}
+h1 em{font-style:italic;color:var(--acc)}
+h1 .rot{display:inline-block;position:relative;color:var(--acc);font-style:italic;min-width:4ch}
+.hero-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-top:56px;flex-wrap:wrap}
+.hero-sub{max-width:460px;color:var(--dim);font-size:1.02rem}
+.hero-sub b{color:var(--ink);font-weight:600}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.cta{position:relative;display:inline-flex;align-items:center;gap:12px;padding:17px 34px;border-radius:100px;font-size:.92rem;font-weight:600;letter-spacing:.02em;overflow:hidden;transition:transform .3s,box-shadow .3s;will-change:transform}
+.cta-solid{background:var(--acc);color:#171310}
+.cta-solid:hover{box-shadow:0 16px 50px rgba(232,179,128,.35);transform:translateY(-2px)}
+.cta-line{border:1px solid var(--line);color:var(--ink)}
+.cta-line:hover{border-color:var(--acc);color:var(--acc)}
+.cta .arr{transition:transform .3s}
+.cta:hover .arr{transform:translateX(5px)}
+/* client marquee */
+.clients{border-top:1px solid var(--line2);border-bottom:1px solid var(--line2);padding:26px 0;overflow:hidden;white-space:nowrap;margin-top:76px}
+.clients .ct{display:inline-flex;align-items:center;will-change:transform}
+.clients span{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.1rem,2.4vw,1.6rem);color:var(--dim);padding:0 3vw;transition:color .3s}
+.clients span:hover{color:var(--acc)}
+.clients i{color:var(--acc);font-style:normal;font-size:.7em}
+
+/* ---------- stats band ---------- */
+.band{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line2);border-radius:20px;background:var(--bg2);margin-top:9vh;overflow:hidden}
+.band>div{padding:34px 26px;border-right:1px solid var(--line2);position:relative;transition:background .4s}
+.band>div:last-child{border-right:none}
+.band>div:hover{background:#1e1e19}
+.band b{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(2rem,4vw,3.2rem);color:var(--ink);display:block;line-height:1}
+.band b i{color:var(--acc);font-style:normal}
+.band span{font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);display:block;margin-top:10px}
+@media(max-width:760px){.band{grid-template-columns:1fr 1fr}.band>div:nth-child(2n){border-right:none}.band>div:nth-child(-n+2){border-bottom:1px solid var(--line2)}}
+
+/* ---------- case studies ---------- */
+.case{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(30px,5vw,70px);align-items:center;padding:11vh 0;border-bottom:1px solid var(--line2)}
+.case:last-of-type{border-bottom:none}
+.case.flip .cinfo{order:2}
+.case.flip .cvis{order:1}
+.cnum{font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.3em;color:var(--acc);margin-bottom:18px}
+.case h3{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(1.7rem,3.6vw,2.7rem);line-height:1.1;margin-bottom:8px}
+.case .role{font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin-bottom:20px}
+.case p{color:var(--dim);font-size:.98rem;max-width:480px;margin-bottom:22px}
+.case p b{color:var(--ink);font-weight:600}
+.impact{display:flex;gap:26px;flex-wrap:wrap;margin-bottom:22px}
+.impact div b{font-family:'Fraunces',serif;font-size:1.5rem;color:var(--acc);display:block;line-height:1.1}
+.impact div span{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.ctags{display:flex;flex-wrap:wrap;gap:8px}
+.ctags span{font-family:'JetBrains Mono',monospace;font-size:.68rem;padding:6px 13px;border-radius:100px;border:1px solid var(--line);color:var(--dim);transition:.3s}
+.case:hover .ctags span{border-color:rgba(232,179,128,.4)}
+@media(max-width:900px){
+  .case{grid-template-columns:1fr;gap:34px;padding:8vh 0}
+  .case.flip .cinfo{order:1}
+  .case.flip .cvis{order:2}
+}
+.case>*,.arow>*,.xhead>*,.cgrid>*,.band>div{min-width:0}
+.arow h4,.xrole{overflow-wrap:break-word}
+/* browser-frame mockups (pure CSS) */
+.cvis{perspective:1200px}
+.shot{border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#21211c;box-shadow:0 40px 90px rgba(0,0,0,.5);transform:rotateX(4deg) rotateY(-6deg);transition:transform .7s cubic-bezier(.19,1,.22,1),box-shadow .7s;will-change:transform}
+.case.flip .shot{transform:rotateX(4deg) rotateY(6deg)}
+.case:hover .shot{transform:rotateX(0) rotateY(0);box-shadow:0 50px 110px rgba(0,0,0,.65)}
+.shot .bar{display:flex;align-items:center;gap:7px;padding:11px 14px;background:#191914;border-bottom:1px solid var(--line2)}
+.shot .bar i{width:9px;height:9px;border-radius:50%;background:#3a3a33}
+.shot .bar i:first-child{background:#d96a5c}.shot .bar i:nth-child(2){background:#dcb45d}.shot .bar i:nth-child(3){background:#7fb069}
+.shot .url{margin-left:12px;font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--dim);background:#22221c;border-radius:6px;padding:3px 12px}
+.shot .cv{padding:18px;display:grid;gap:12px}
+/* ISPM mock */
+.mock-ispm{grid-template-columns:120px 1fr}
+.mside{background:#1d1d18;border-radius:9px;padding:12px;display:grid;gap:9px;align-content:start}
+.mside i{display:block;height:8px;border-radius:4px;background:#2c2c25}
+.mside i:first-child{background:var(--acc);opacity:.75}
+.mmain{display:grid;gap:12px}
+.mkpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mkpi{background:#1d1d18;border-radius:9px;padding:11px}
+.mkpi b{display:block;font-family:'JetBrains Mono',monospace;font-size:.85rem;color:var(--ink)}
+.mkpi span{font-size:.55rem;color:var(--dim);font-family:'JetBrains Mono',monospace;letter-spacing:.08em;text-transform:uppercase}
+.mkpi.warn b{color:#dcb45d}.mkpi.crit b{color:#d96a5c}.mkpi.ok b{color:#7fb069}
+.mchart{background:#1d1d18;border-radius:9px;padding:12px;height:120px;position:relative;overflow:hidden}
+.mchart svg{position:absolute;inset:12px}
+.mrows{display:grid;gap:7px}
+.mrows i{display:block;height:10px;border-radius:5px;background:#24241e}
+.mrows i:nth-child(1){width:92%}.mrows i:nth-child(2){width:78%}.mrows i:nth-child(3){width:85%}
+/* Ads mock */
+.mock-ads{grid-template-columns:1fr 1fr}
+.mad{background:#1d1d18;border-radius:9px;padding:12px;display:grid;gap:9px}
+.mad .thumb{height:74px;border-radius:7px;background:linear-gradient(120deg,#33241a,#3f2b1c 55%,#2c1f16);position:relative;overflow:hidden}
+.mad .thumb::after{content:'▶';position:absolute;inset:0;display:grid;place-items:center;color:var(--acc);font-size:1rem}
+.mad .l1{height:8px;border-radius:4px;background:#2c2c25;width:85%}
+.mad .l2{height:8px;border-radius:4px;background:#2c2c25;width:55%}
+.mad .gen{height:26px;border-radius:6px;background:linear-gradient(90deg,var(--acc2),var(--acc));display:grid;place-items:center;font-family:'JetBrains Mono',monospace;font-size:.58rem;color:#171310;letter-spacing:.14em}
+/* fleet mock */
+.mock-fleet{grid-template-columns:1.3fr 1fr}
+.mmap{background:#1d1d18;border-radius:9px;position:relative;min-height:170px;overflow:hidden;
+  background-image:linear-gradient(rgba(242,237,227,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(242,237,227,.05) 1px,transparent 1px);background-size:26px 26px}
+.mmap .route{position:absolute;inset:0}
+.mmap .dot{position:absolute;width:10px;height:10px;border-radius:50%;background:var(--acc);box-shadow:0 0 14px var(--acc);animation:drive 7s linear infinite}
+@keyframes drive{0%{top:75%;left:8%}25%{top:38%;left:30%}50%{top:52%;left:58%}75%{top:22%;left:74%}100%{top:75%;left:8%}}
+.mlist{display:grid;gap:9px;align-content:start}
+.mev{background:#1d1d18;border-radius:8px;padding:9px 11px;font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--dim);display:flex;justify-content:space-between}
+.mev b{color:#7fb069;font-weight:500}
+.mev.warn b{color:#dcb45d}
+
+/* animated tooltips (companies) */
+.tt{position:relative;cursor:help}
+.tt::after{content:attr(data-tt);position:absolute;bottom:calc(100% + 12px);left:0;background:#242019;border:1px solid var(--line);color:var(--ink);font-family:'Space Grotesk',sans-serif;font-size:.74rem;font-weight:400;letter-spacing:.01em;text-transform:none;padding:10px 15px;border-radius:12px;width:max-content;max-width:250px;line-height:1.5;opacity:0;transform:translateY(8px) scale(.96);transform-origin:bottom left;transition:opacity .35s cubic-bezier(.19,1,.22,1),transform .35s cubic-bezier(.19,1,.22,1);pointer-events:none;box-shadow:0 18px 50px rgba(0,0,0,.55);z-index:60}
+.tt::before{content:'';position:absolute;bottom:calc(100% + 7px);left:18px;width:9px;height:9px;background:#242019;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transform:rotate(45deg) scale(0);transition:transform .3s .05s;z-index:61}
+.tt:hover::after,.tt:focus-visible::after{opacity:1;transform:translateY(0) scale(1)}
+.tt:hover::before,.tt:focus-visible::before{transform:rotate(45deg) scale(1)}
+@media(hover:none){.tt{cursor:default}.tt::after,.tt::before{display:none}}
+.xhead .tt::after,.arow .tt::after{left:auto;right:0;transform-origin:bottom right}
+.xhead .tt::before,.arow .tt::before{left:auto;right:16px}
+/* compressor mockup */
+.mock-comp{grid-template-columns:1.25fr 1fr}
+.mspec{background:#1d1d18;border-radius:9px;padding:13px;display:grid;gap:11px;align-content:start}
+.msp{display:grid;grid-template-columns:64px 1fr 34px;gap:9px;align-items:center;font-family:'JetBrains Mono',monospace;font-size:.58rem;color:var(--dim)}
+.msp .trk{height:7px;border-radius:4px;background:#26261f;overflow:hidden}
+.msp .trk i{display:block;height:100%;border-radius:4px;background:linear-gradient(90deg,var(--acc2),var(--acc))}
+.msp b{color:var(--ink);font-weight:500;text-align:right}
+.mres{background:#1d1d18;border-radius:9px;padding:14px;display:grid;gap:9px;align-content:start;text-align:center}
+.mres .badge{font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:.16em;color:#7fb069;border:1px solid rgba(127,176,105,.35);border-radius:100px;padding:4px 10px;justify-self:center}
+.mres .model{font-family:'Fraunces',serif;font-size:1.6rem;color:var(--acc)}
+.mres .sub2{font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--dim);letter-spacing:.1em}
+.mres .fit{height:8px;border-radius:4px;background:#26261f;overflow:hidden}
+.mres .fit i{display:block;height:100%;width:94%;background:#7fb069;border-radius:4px}
+/* healthcare mockup */
+.mock-health{grid-template-columns:1fr 1fr}
+.mcal{background:#1d1d18;border-radius:9px;padding:12px;display:grid;gap:9px;align-content:start}
+.mcal .mhead{font-family:'JetBrains Mono',monospace;font-size:.58rem;color:var(--dim);letter-spacing:.12em;display:flex;justify-content:space-between}
+.mcal .mgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+.mcal .mgrid i{aspect-ratio:1;border-radius:5px;background:#24241e}
+.mcal .mgrid i.on{background:var(--acc);opacity:.85}
+.mcal .mgrid i.half{background:#33301f}
+.mcal .slot{font-family:'JetBrains Mono',monospace;font-size:.56rem;color:#7fb069;border:1px dashed rgba(127,176,105,.35);border-radius:6px;padding:6px;text-align:center}
+/* NOW card */
+.nowcard{border-radius:24px;padding:1.5px;background:linear-gradient(120deg,rgba(232,179,128,.55),rgba(232,179,128,.1) 45%,rgba(158,201,143,.4));margin:7vh 0 1vh}
+.nin{border-radius:22px;background:linear-gradient(180deg,#1e1c15,#161510);padding:clamp(24px,3.4vw,44px);display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,60px);align-items:center}
+.nbadge{font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.22em;color:var(--ok);border:1px solid rgba(158,201,143,.35);padding:6px 13px;border-radius:100px;display:inline-block;animation:blink 2s infinite}
+.nco{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(2.4rem,5vw,4rem);color:var(--acc);line-height:1.05;margin-top:14px}
+.nrole{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-top:8px;max-width:220px}
+.nright p{color:var(--dim);font-size:.98rem;margin-bottom:16px}
+.nright p b{color:var(--ink);font-weight:600}
+.ntype{font-size:.8rem;color:var(--ok);margin-bottom:16px;min-height:1.5em}
+.ncaret{display:inline-block;width:8px;height:1em;background:var(--ok);vertical-align:text-bottom;margin-left:2px;animation:blink 1s steps(1) infinite}
+@media(max-width:820px){.nin{grid-template-columns:1fr;gap:20px}.nrole{max-width:none}}
+/* zurich air-ops mockup */
+.mock-air{grid-template-columns:1fr}
+.mhead2{display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.14em;color:var(--dim)}
+.mhead2 .mok{color:#7fb069}
+.mfl{display:grid;grid-template-columns:64px 1fr auto;gap:10px;background:#1d1d18;border-radius:8px;padding:9px 12px;font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--dim);opacity:0;transform:translateX(-14px);transition:.6s cubic-bezier(.19,1,.22,1)}
+.case.inview .mfl{opacity:1;transform:none}
+.case.inview .mfl:nth-child(3){transition-delay:.15s}.case.inview .mfl:nth-child(4){transition-delay:.3s}.case.inview .mfl:nth-child(5){transition-delay:.45s}.case.inview .mfl:nth-child(6){transition-delay:.6s}
+.mfl span:first-child{color:var(--ink)}
+.mfl b{font-weight:500}
+.mfl .ok{color:#7fb069}.mfl .wn{color:#dcb45d}.mfl .ac{color:var(--acc)}.mfl .dm{color:var(--dim)}
+.mrun{position:relative;height:26px;border-radius:8px;background:#1d1d18;margin-top:2px}
+.mrun::before{content:'';position:absolute;top:50%;left:4%;right:4%;height:2px;background:repeating-linear-gradient(90deg,#3a3a30 0 14px,transparent 14px 24px)}
+.mrun .rwl{position:absolute;right:10px;top:50%;translate:0 -50%;font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--dim);letter-spacing:.14em}
+.mrun i{position:absolute;top:50%;translate:0 -50%;font-style:normal;font-size:13px;color:var(--acc);text-shadow:0 0 12px rgba(232,179,128,.8);animation:taxi 6s ease-in-out infinite}
+@keyframes taxi{0%{left:4%}48%{left:66%}56%{left:66%}100%{left:90%}}
+/* mockup micro-animations when case enters view */
+.msp .trk i,.mres .fit i{transform:scaleX(0);transform-origin:left;transition:transform 1.2s cubic-bezier(.19,1,.22,1) .25s}
+.case.inview .msp .trk i,.case.inview .mres .fit i{transform:scaleX(1)}
+.case.inview .msp:nth-child(2) .trk i{transition-delay:.35s}.case.inview .msp:nth-child(3) .trk i{transition-delay:.45s}.case.inview .msp:nth-child(4) .trk i{transition-delay:.55s}.case.inview .msp:nth-child(5) .trk i{transition-delay:.65s}
+.mchart path{stroke-dasharray:420;stroke-dashoffset:420;transition:stroke-dashoffset 1.8s ease .3s}
+.mchart path[fill]{fill-opacity:0;transition:fill-opacity 1s ease 1.4s,stroke-dashoffset 1.8s ease .3s}
+.case.inview .mchart path{stroke-dashoffset:0}
+.case.inview .mchart path[fill]{fill-opacity:1}
+.mcal .mgrid i.on,.mcal .mgrid i.half,.mcal .slot{opacity:0;transform:scale(.4);transition:.5s cubic-bezier(.34,1.56,.64,1) .4s}
+.case.inview .mcal .mgrid i.on,.case.inview .mcal .mgrid i.half,.case.inview .mcal .slot{opacity:1;transform:scale(1)}
+.case.inview .mcal .slot{transition-delay:.7s}
+.mkpi.crit b{animation:kpul 2.4s ease-in-out infinite}
+@keyframes kpul{50%{opacity:.55}}
+/* flat mockups on touch */
+@media(hover:none){
+  .shot,.case.flip .shot,.case:hover .shot{transform:none!important}
+}
+/* avail link hover */
+a.avail{transition:.3s}
+a.avail:hover{box-shadow:0 0 26px rgba(158,201,143,.3);color:var(--ok)}
+/* compact archive */
+.arch{border-top:1px solid var(--line2)}
+.arow{display:grid;grid-template-columns:auto 1fr auto auto;gap:clamp(14px,3vw,40px);align-items:center;padding:26px 6px;border-bottom:1px solid var(--line2);transition:padding .3s,background .3s;position:relative}
+.arow:hover{padding-left:20px;background:linear-gradient(90deg,rgba(232,179,128,.05),transparent)}
+.arow .ai2{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--acc)}
+.arow h4{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(1.15rem,2.4vw,1.7rem)}
+.arow .aw{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--dim);letter-spacing:.1em;text-transform:uppercase}
+.arow .arr2{color:var(--acc);transition:transform .3s}
+.arow:hover .arr2{transform:translate(4px,-4px)}
+@media(max-width:640px){.arow{grid-template-columns:auto 1fr auto}.arow .aw{display:none}}
+
+/* ---------- capabilities ---------- */
+.caps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line2);border:1px solid var(--line2);border-radius:20px;overflow:hidden}
+.cap{background:var(--bg2);padding:clamp(26px,3.4vw,44px);transition:background .4s}
+.cap:hover{background:#1e1e19}
+.cap .ci{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--acc);letter-spacing:.24em;margin-bottom:20px;display:block}
+.cap h3{font-family:'Fraunces',serif;font-weight:400;font-size:1.5rem;margin-bottom:18px}
+.cap ul{list-style:none;display:grid;gap:11px}
+.cap li{color:var(--dim);font-size:.92rem;padding-left:22px;position:relative;transition:color .3s}
+.cap li::before{content:'—';position:absolute;left:0;color:var(--acc)}
+.cap li:hover{color:var(--ink)}
+.cap li b{color:var(--ink);font-weight:600}
+@media(max-width:900px){.caps{grid-template-columns:1fr}}
+
+/* ---------- experience accordion ---------- */
+.xp{border-top:1px solid var(--line2)}
+.xrow{border-bottom:1px solid var(--line2)}
+.xhead{display:grid;grid-template-columns:110px 1fr auto auto;gap:clamp(12px,3vw,40px);align-items:baseline;padding:28px 6px;cursor:pointer;transition:background .3s}
+.xhead:hover{background:linear-gradient(90deg,rgba(232,179,128,.04),transparent)}
+.xyr{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--acc);letter-spacing:.08em}
+.xrole{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(1.15rem,2.6vw,1.8rem)}
+.xco{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.xplus{width:30px;height:30px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--acc);transition:.4s;font-size:.9rem}
+.xrow.open .xplus{transform:rotate(45deg);background:var(--acc);color:#171310;border-color:var(--acc)}
+.xbody{max-height:0;overflow:hidden;transition:max-height .6s cubic-bezier(.19,1,.22,1)}
+.xbody-in{padding:0 6px 30px 0;color:var(--dim);font-size:.95rem;max-width:820px}
+.xbody-in b{color:var(--ink);font-weight:600}
+.xbody-in .xtags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.xbody-in .xtags span{font-family:'JetBrains Mono',monospace;font-size:.66rem;padding:5px 12px;border-radius:100px;border:1px solid var(--line);color:var(--dim)}
+@media(max-width:640px){.xhead{grid-template-columns:1fr auto;row-gap:4px}.xyr{order:3}.xco{order:4}}
+
+/* ---------- terminal (signature) ---------- */
+.term{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#15150f;box-shadow:0 34px 80px rgba(0,0,0,.45)}
+.term .tb{display:flex;align-items:center;gap:7px;padding:12px 16px;background:#1b1b15;border-bottom:1px solid var(--line2);font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--dim)}
+.term .tb i{width:9px;height:9px;border-radius:50%}
+.term .tb i:nth-child(1){background:#d96a5c}.term .tb i:nth-child(2){background:#dcb45d}.term .tb i:nth-child(3){background:#7fb069}
+.term .to{padding:20px;font-family:'JetBrains Mono',monospace;font-size:.82rem;line-height:1.85;min-height:210px;max-height:340px;overflow-y:auto;overflow-wrap:break-word}
+.term .to .p{color:var(--acc)}
+.term .to .g{color:#7fb069}
+.term .to .d{color:var(--dim)}
+.term .to .w{color:var(--ink)}
+.term .ti{display:flex;gap:10px;padding:13px 20px;border-top:1px solid var(--line2);font-family:'JetBrains Mono',monospace;font-size:.82rem;align-items:center}
+.term .ti input{flex:1;min-width:0;background:none;border:none;outline:none;color:var(--ink);font-family:inherit;font-size:inherit}
+.tsug{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
+.tsug button{font-family:'JetBrains Mono',monospace;font-size:.68rem;padding:7px 15px;border-radius:100px;border:1px solid var(--line);color:var(--dim);transition:.3s}
+.tsug button:hover{border-color:var(--acc);color:var(--acc)}
+
+/* ---------- contact ---------- */
+#contact .h2{font-size:clamp(2.6rem,8vw,6rem)}
+.cgrid{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(30px,6vw,90px);align-items:start}
+@media(max-width:860px){.cgrid{grid-template-columns:1fr}}
+.email-big{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.2rem,3.2vw,2rem);color:var(--acc);border-bottom:1px solid rgba(232,179,128,.4);display:inline-flex;align-items:center;gap:12px;padding-bottom:6px;transition:.3s;cursor:pointer;background:none}
+.email-big:hover{color:var(--ink);border-color:var(--ink)}
+.copied{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--ok);margin-left:12px;opacity:0;transition:.3s}
+.copied.show{opacity:1}
+.cmeta{margin-top:34px;display:grid;gap:10px;font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--dim)}
+.cmeta b{color:var(--ink);font-weight:500}
+.f7{display:grid;gap:0;border-top:1px solid var(--line)}
+.f7 .fr{display:grid;grid-template-columns:130px 1fr;border-bottom:1px solid var(--line);align-items:center}
+.f7 label{font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.f7 input,.f7 textarea{background:none;border:none;outline:none;color:var(--ink);font-family:'Space Grotesk',sans-serif;font-size:1rem;padding:19px 0;width:100%;min-width:0}
+.f7 textarea{min-height:96px;resize:vertical}
+.f7 input:focus,.f7 textarea:focus{color:var(--acc)}
+.f7 .cta{margin-top:30px;justify-self:start}
+@media(max-width:560px){.f7 .fr{grid-template-columns:1fr}.f7 label{padding-top:14px}}
+
+footer{border-top:1px solid var(--line2);margin-top:12vh;position:relative;z-index:1}
+.fin{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:30px clamp(20px,5vw,70px);font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.1em;color:var(--dim)}
+.fin b{color:var(--acc);font-weight:500}
+.fin a:hover{color:var(--ink)}
+
+.sp{padding-top:13vh;padding-bottom:2vh}
+
+/* touch ergonomics: no iOS auto-zoom, 44px tap targets */
+@media (pointer:coarse){
+  .term .ti input,.f7 input,.f7 textarea{font-size:16px}
+  .term .ti input{padding:12px 0}
+  .cmeta a{padding:12px 0}
+  .term .ti{padding:16px 20px}
+  .tsug button{padding:13px 18px;font-size:.74rem;min-height:44px}
+  .email-big{padding:8px 0 12px}
+  .fin{gap:8px 26px}
+  .fin a{padding:12px 0;display:inline-block}
+  .cmeta a{padding:6px 0;display:inline-block}
+  .mb{padding:14px 12px}
+}
+/* aspect-ratio fallback (Safari <15) */
+.mcal .mgrid i{height:13px}
+@supports (aspect-ratio:1){.mcal .mgrid i{height:auto;aspect-ratio:1}}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001s!important;transition-duration:.001s!important}
+  .lm>span,.rise,.mfl,.mcal .mgrid i.on,.mcal .mgrid i.half,.mcal .slot{opacity:1;transform:none}
+  .msp .trk i,.mres .fit i{transform:scaleX(1)}
+  .mchart path{stroke-dashoffset:0}
+  .mchart path[fill]{fill-opacity:1}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<div id="veil" aria-hidden="true">
+  <div class="vr"><span><b>Engineer.</b><b>Architect.</b><b>Mentor.</b><b>Riteshh Sharma</b></span></div>
+  <div class="vc" id="vc">00</div>
+</div>
+
+<div class="glow g1"></div><div class="glow g2"></div>
+<div id="cdot"></div>
+
+<header id="hd">
+  <a class="wordmark" href="#hero" aria-label="Riteshh Sharma — home">Riteshh <i>Sharma</i></a>
+  <nav class="hnav" aria-label="Primary">
+    <a href="#work">Work</a>
+    <a href="#caps">Capabilities</a>
+    <a href="#xp">Experience</a>
+    <a href="#shell">Terminal</a>
+    <a class="avail" href="#contact">OPEN TO WORK</a>
+  </nav>
+  <button class="mb" id="mb" aria-label="Open menu"><span></span><span></span><span></span></button>
+</header>
+
+<nav id="mov" aria-label="Mobile">
+  <a href="#work">Work <i>01</i></a>
+  <a href="#caps">Capabilities <i>02</i></a>
+  <a href="#xp">Experience <i>03</i></a>
+  <a href="#shell">Terminal <i>04</i></a>
+  <a href="#contact">Contact <i>05</i></a>
+</nav>
+
+<main>
+<!-- ================= HERO ================= -->
+<section id="hero" class="wrap inview">
+  <p class="hero-kick">Senior Software Engineer — Bengaluru, India</p>
+  <h1>
+    <span class="lm"><span>I architect enterprise</span></span>
+    <span class="lm"><span>software that feels</span></span>
+    <span class="lm"><span><span class="rot" id="rot">effortless</span><em>.</em></span></span>
+  </h1>
+  <div class="hero-foot">
+    <p class="hero-sub rise d1">A decade turning complex domains — <b>global commerce, identity security, AI advertising, fleet intelligence, aviation ops</b> — into fast, accessible software with <b>React, Next.js, TypeScript &amp; GraphQL</b>. Currently at <b>eBay</b>.</p>
+    <div class="hero-ctas rise d2">
+      <a class="cta cta-solid" href="#work" data-mag>View case studies <span class="arr">→</span></a>
+      <a class="cta cta-line" href="#contact" data-mag>Start a conversation</a>
+    </div>
+  </div>
+  <div class="clients rise d3" aria-label="Companies">
+    <div class="ct" id="ct">
+      <span>eBay</span><i>✦</i><span>Saviynt</span><i>✦</i><span>ZEE5</span><i>✦</i><span>Spireon</span><i>✦</i><span>HARMAN</span><i>✦</i><span>Honeywell</span><i>✦</i><span>Ingersoll Rand</span><i>✦</i>
+      <span>eBay</span><i>✦</i><span>Saviynt</span><i>✦</i><span>ZEE5</span><i>✦</i><span>Spireon</span><i>✦</i><span>HARMAN</span><i>✦</i><span>Honeywell</span><i>✦</i><span>Ingersoll Rand</span><i>✦</i>
+    </div>
+  </div>
+  <div class="band">
+    <div><b data-cnt="10"><i>0</i>+</b><span>Years shipping</span></div>
+    <div><b data-cnt="7"><i>0</i></b><span>Enterprises served</span></div>
+    <div><b data-cnt="20"><i>0</i>%</b><span>Faster loads via GraphQL</span></div>
+    <div><b>RSA<i>'25</i></b><span>Flagship launch — ISPM</span></div>
+  </div>
+</section>
+
+<!-- ================= CASE STUDIES ================= -->
+<section id="work" class="wrap sp">
+  <p class="kicker">01 — Selected Work</p>
+  <h2 class="h2"><span class="lm"><span>Case studies, not</span></span><span class="lm"><span>just <em>screenshots</em>.</span></span></h2>
+
+  <div class="nowcard rise" id="now">
+    <div class="nin">
+      <div class="nleft">
+        <span class="nbadge">● NOW</span>
+        <div class="nco">eBay</div>
+        <div class="nrole">Member of Technical Staff — 1 · since Oct 2025</div>
+      </div>
+      <div class="nright">
+        <p>Engineering <b>Citadel</b> — eBay's internal platform for business operations: ramp &amp; policy management across regions, item &amp; shipping criteria. I build <b>AI-assisted systems with Claude (Opus / Sonnet)</b> that let teams manage ramps, enforce quality gates, and load team skills by prompt — so even a brand-new developer ships on day one.</p>
+        <div class="ntype mono">▸ <span id="nowtype"></span><span class="ncaret"></span></div>
+        <div class="ctags"><span>React</span><span>TypeScript</span><span>Claude Code</span><span>MCP · Jira · Figma</span><span>Playwright</span><span>AI Workflows</span></div>
+      </div>
+    </div>
+  </div>
+
+  <article class="case">
+    <div class="cinfo">
+      <div class="cnum">CASE — 01</div>
+      <h3>ISPM · Identity Security Posture Management</h3>
+      <div class="role">Saviynt — Senior Software Engineer III</div>
+      <p>Saviynt's flagship product, launched at <b>RSA Conference 2025</b>. I engineered the posture dashboards — dense identity-risk models rendered as <b>real-time, WCAG-compliant visualizations</b> — plus <b>self-serve analytics on Apache Superset</b>, letting users compose their own charts from live posture data. Quality enforced end-to-end: <b>React Testing Library</b> unit suites and <b>Husky</b> pre-commit gates.</p>
+      <div class="impact">
+        <div><b>RSA '25</b><span>flagship launch</span></div>
+        <div><b>Superset</b><span>self-serve analytics</span></div>
+        <div><b>RTL</b><span>unit-tested UI</span></div>
+      </div>
+      <div class="ctags"><span>React 18</span><span>TypeScript</span><span>Material-UI</span><span>Apache Superset</span><span>RTL</span><span>Husky</span><span>RBAC UIs</span></div>
+    </div>
+    <div class="cvis rise"><div class="shot" aria-hidden="true">
+      <div class="bar"><i></i><i></i><i></i><span class="url">ispm.saviynt.com/posture</span></div>
+      <div class="cv mock-ispm">
+        <div class="mside"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="mmain">
+          <div class="mkpis">
+            <div class="mkpi crit"><b>128</b><span>Critical</span></div>
+            <div class="mkpi warn"><b>1.4k</b><span>Risky IDs</span></div>
+            <div class="mkpi ok"><b>98.2%</b><span>Coverage</span></div>
+          </div>
+          <div class="mchart"><svg viewBox="0 0 300 96" preserveAspectRatio="none"><path d="M0,80 C40,70 60,40 90,46 C120,52 140,20 180,26 C220,32 240,12 300,18 L300,96 L0,96 Z" fill="rgba(232,179,128,.14)"/><path d="M0,80 C40,70 60,40 90,46 C120,52 140,20 180,26 C220,32 240,12 300,18" fill="none" stroke="#e8b380" stroke-width="2"/></svg></div>
+          <div class="mrows"><i></i><i></i><i></i></div>
+        </div>
+      </div>
+    </div></div>
+  </article>
+
+  <article class="case flip">
+    <div class="cinfo">
+      <div class="cnum">CASE — 02</div>
+      <h3>Ads Studio · AI-Powered Ad Platform</h3>
+      <div class="role">ZEE5 — SDE-III · Team Lead, feature squads</div>
+      <p>The interface for <b>AI-generated, targeted advertising</b> across ZEE5 and social platforms. I also shipped Truecaller &amp; B2B auth journeys (Tata Play Binge, Vi), a custom error-tracking layer, and a novel device-ID strategy — <b>cutting real infrastructure cost</b> and lifting FCFP. Along the way I stepped up as <b>team lead</b> — squad planning, code reviews, and delivery ownership.</p>
+      <div class="impact">
+        <div><b>~20%</b><span>faster loads (GraphQL)</span></div>
+        <div><b>Millions</b><span>of users on auth flows</span></div>
+        <div><b>Lead</b><span>squad planning &amp; reviews</span></div>
+      </div>
+      <div class="ctags"><span>React</span><span>GraphQL</span><span>Node.js</span><span>AuthN UX</span></div>
+    </div>
+    <div class="cvis rise"><div class="shot" aria-hidden="true">
+      <div class="bar"><i></i><i></i><i></i><span class="url">ads-studio.zee5.com/generate</span></div>
+      <div class="cv mock-ads">
+        <div class="mad"><div class="thumb"></div><div class="l1"></div><div class="l2"></div><div class="gen">✦ GENERATE VARIANT</div></div>
+        <div class="mad"><div class="l1"></div><div class="l2"></div><div class="thumb"></div><div class="gen">TARGET: 18–34 · SOUTH</div></div>
+      </div>
+    </div></div>
+  </article>
+
+  <article class="case">
+    <div class="cinfo">
+      <div class="cnum">CASE — 03</div>
+      <h3>Fleet Intelligence · Event Dashboard</h3>
+      <div class="role">Spireon — Senior Software Engineer</div>
+      <p>A system-wide <b>event &amp; video-monitoring dashboard</b> for device and driver tracking, plus the "Star Driver" analytics program and a multi-purpose reporting engine. I ran as an <b>individual contributor owning the module end-to-end</b> — including E2E test authorship and deployments.</p>
+      <div class="impact">
+        <div><b>Live</b><span>video telemetry</span></div>
+        <div><b>★ Driver</b><span>analytics program</span></div>
+        <div><b>E2E</b><span>owned quality gates</span></div>
+      </div>
+      <div class="ctags"><span>React</span><span>Next.js</span><span>Reporting</span><span>E2E</span></div>
+    </div>
+    <div class="cvis rise"><div class="shot" aria-hidden="true">
+      <div class="bar"><i></i><i></i><i></i><span class="url">fleet.spireon.com/events</span></div>
+      <div class="cv mock-fleet">
+        <div class="mmap"><div class="dot"></div></div>
+        <div class="mlist">
+          <div class="mev">TRIP-4821 <b>ON ROUTE</b></div>
+          <div class="mev warn">CAM-112 <b>HARSH BRAKE</b></div>
+          <div class="mev">DRV-207 <b>★ 98 SCORE</b></div>
+          <div class="mev">RPT-Q3 <b>EXPORTED</b></div>
+        </div>
+      </div>
+    </div></div>
+  </article>
+
+  <article class="case flip">
+    <div class="cinfo">
+      <div class="cnum">CASE — 04</div>
+      <h3>Compressor Analysis Suite</h3>
+      <div class="role">HARMAN · for Ingersoll Rand — VB → React/Electron migration</div>
+      <p>Ingersoll Rand's engineers needed to match <b>industrial compressors to use-cases</b> — by noise level (dB), power, suction capacity, supported devices and target domain. I helped migrate their legacy <b>Visual Basic system to React + Electron</b>: a modern desktop suite that analyses specs and recommends the right compressor, with an animated player demonstrating compressor function.</p>
+      <div class="impact">
+        <div><b>VB → React</b><span>legacy migration</span></div>
+        <div><b>Desktop</b><span>Electron delivery</span></div>
+        <div><b>Spec AI</b><span>match by dB · kW · CFM</span></div>
+      </div>
+      <div class="ctags"><span>React</span><span>Electron.js</span><span>Node.js</span><span>SQLite</span><span>Redux</span></div>
+    </div>
+    <div class="cvis rise"><div class="shot" aria-hidden="true">
+      <div class="bar"><i></i><i></i><i></i><span class="url">compressor-suite — desktop</span></div>
+      <div class="cv mock-comp">
+        <div class="mspec">
+          <div class="msp"><span>NOISE dB</span><span class="trk"><i style="width:62%"></i></span><b>72</b></div>
+          <div class="msp"><span>POWER kW</span><span class="trk"><i style="width:48%"></i></span><b>45</b></div>
+          <div class="msp"><span>SUCTION</span><span class="trk"><i style="width:78%"></i></span><b>350</b></div>
+          <div class="msp"><span>DOMAIN</span><span class="trk"><i style="width:35%"></i></span><b>PHR</b></div>
+          <div class="msp"><span>DEVICES</span><span class="trk"><i style="width:56%"></i></span><b>12</b></div>
+        </div>
+        <div class="mres">
+          <span class="badge">✓ BEST MATCH</span>
+          <div class="model">RX-11</div>
+          <div class="sub2">ROTARY · OIL-FREE</div>
+          <div class="fit"><i></i></div>
+          <div class="sub2">FIT SCORE 94%</div>
+        </div>
+      </div>
+    </div></div>
+  </article>
+
+  <article class="case">
+    <div class="cinfo">
+      <div class="cnum">CASE — 05</div>
+      <h3>Healthcare · Patient-Care Platform &amp; Clinic Apps</h3>
+      <div class="role">Upside Cloud Technologies — Senior Software Developer</div>
+      <p>My first chapter in product engineering — a startup where we built healthcare software end-to-end. A <b>hospital management system</b>: patient onboarding, doctor booking, invoicing, medications, <b>inventory and hospital-bed management</b>, plus remote patient monitoring and biomedical-waste compliance. Also shipped a <b>hybrid appointment-booking app for a gynecology clinic — live on the App Store</b>.</p>
+      <div class="impact">
+        <div><b>App Store</b><span>shipped clinic app</span></div>
+        <div><b>End-to-end</b><span>records → invoicing</span></div>
+        <div><b>Beds &amp; Rx</b><span>ops management</span></div>
+      </div>
+      <div class="ctags"><span>React</span><span>JavaScript</span><span>Hybrid Apps</span><span>Healthcare</span></div>
+    </div>
+    <div class="cvis rise"><div class="shot" aria-hidden="true">
+      <div class="bar"><i></i><i></i><i></i><span class="url">clinic.app/appointments</span></div>
+      <div class="cv mock-health">
+        <div class="mcal">
+          <div class="mhead"><span>JULY</span><span>DR. MEHTA ▾</span></div>
+          <div class="mgrid"><i></i><i></i><i class="half"></i><i></i><i class="on"></i><i></i><i></i><i></i><i class="half"></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i><i class="half"></i><i></i><i></i><i></i></div>
+          <div class="slot">10:30 — CONFIRMED ✓</div>
+        </div>
+        <div class="mlist">
+          <div class="mev">PT-2041 · ONBOARDED <b>✓</b></div>
+          <div class="mev">INV-88 · ₹4,200 <b>PAID</b></div>
+          <div class="mev warn">RX-STOCK · AMOX <b>LOW</b></div>
+          <div class="mev">BED 12-A <b>ASSIGNED</b></div>
+        </div>
+      </div>
+    </div></div>
+  </article>
+
+  <article class="case flip">
+    <div class="cinfo">
+      <div class="cnum">CASE — 06</div>
+      <h3>Zurich Airport · Operations Tooling</h3>
+      <div class="role">HARMAN · for Honeywell — real-time event management</div>
+      <p>Mission-critical tooling for <b>Zurich Airport</b> — orchestrating flight landing, parking and departure events with <b>real-time communication to PID devices</b> across the terminal. Inside a <b>25-engineer program</b>, I operated as an <b>individual contributor owning features end-to-end</b> — from React frontends to Node.js services.</p>
+      <div class="impact">
+        <div><b>25-eng</b><span>program scale</span></div>
+        <div><b>IC · E2E</b><span>frontend → Node.js</span></div>
+        <div><b>Real-time</b><span>PID device comms</span></div>
+      </div>
+      <div class="ctags"><span>React</span><span>Redux</span><span>Node.js</span><span>Real-time</span></div>
+    </div>
+    <div class="cvis rise"><div class="shot" aria-hidden="true">
+      <div class="bar"><i></i><i></i><i></i><span class="url">ops.zrh — event console</span></div>
+      <div class="cv mock-air">
+        <div class="mhead2"><span>ZRH · LIVE OPERATIONS</span><span class="mok">● ALL SYSTEMS</span></div>
+        <div class="mfl"><span>LX 318</span><span>A320 · GATE B12</span><b class="ok">LANDED</b></div>
+        <div class="mfl"><span>EK 087</span><span>A380 · RWY 28</span><b class="wn">TAXI</b></div>
+        <div class="mfl"><span>BA 711</span><span>B777 · STAND 44</span><b class="ac">PARKING</b></div>
+        <div class="mfl"><span>QR 096</span><span>A350 · DEP 12:40</span><b class="dm">BOARDING</b></div>
+        <div class="mrun"><span class="rwl">RWY 28</span><i>✈</i></div>
+      </div>
+    </div></div>
+  </article>
+</section>
+
+<!-- ================= CAPABILITIES ================= -->
+<section id="caps" class="wrap sp">
+  <p class="kicker">02 — Capabilities</p>
+  <h2 class="h2"><span class="lm"><span>A decade of</span></span><span class="lm"><span>compounding <em>craft</em>.</span></span></h2>
+  <div class="caps rise">
+    <div class="cap">
+      <span class="ci">/ ARCHITECTURE</span>
+      <h3>Frontend at scale</h3>
+      <ul>
+        <li><b>React 18</b> — concurrent patterns, Suspense, memo discipline</li>
+        <li><b>Next.js</b> — SSR / ISR, route-level code-splitting</li>
+        <li><b>TypeScript strict</b> — typed contracts end-to-end</li>
+        <li><b>Design systems</b> — tokens, MUI theming, RBAC-aware UI</li>
+        <li>State at scale — Redux, React Query patterns</li>
+      </ul>
+    </div>
+    <div class="cap">
+      <span class="ci">/ QUALITY</span>
+      <h3>Performance &amp; trust</h3>
+      <ul>
+        <li><b>Core Web Vitals</b> — LCP/INP budgets, ~20% load gains</li>
+        <li><b>Accessibility</b> — WCAG-first components, a11y audits</li>
+        <li><b>React Testing Library</b> + E2E suites I author &amp; own</li>
+        <li><b>Harness CI/CD</b> — deployment ownership</li>
+        <li>Error observability — custom tracking layers</li>
+      </ul>
+    </div>
+    <div class="cap">
+      <span class="ci">/ AI &amp; API</span>
+      <h3>The AI-era stack</h3>
+      <ul>
+        <li><b>GraphQL</b> — schema-driven data, fewer round-trips</li>
+        <li><b>Node.js / Electron</b> — services &amp; desktop delivery</li>
+        <li><b>AI product UIs</b> — Ads Studio, Saviynt Intelligence</li>
+        <li><b>AI-assisted engineering</b> — daily, disciplined, fast</li>
+        <li>Auth UX — Truecaller, B2B SSO journeys at scale</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="xp" class="wrap sp">
+  <p class="kicker">03 — Experience</p>
+  <h2 class="h2"><span class="lm"><span>Six companies.</span></span><span class="lm"><span>One <em>standard</em>.</span></span></h2>
+  <div class="xp rise">
+    <div class="xrow">
+      <div class="xhead" role="button" tabindex="0" aria-expanded="false"><span class="xyr">2025—NOW</span><span class="xrole">Member of Technical Staff — 1</span><span class="xco tt" data-tt="eBay — one of the world's largest e-commerce marketplaces: 130+ markets, billions of live listings.">eBay</span><span class="xplus">+</span></div>
+      <div class="xbody"><div class="xbody-in">Since <b>Oct 13, 2025</b> — IC on <b>Citadel</b>, eBay's internal platform for business operations: ramp &amp; policy management across regions, item &amp; shipping criteria. Built <b>AI-assisted systems</b> (Copilot → Claude Opus / Sonnet 4.5) that help teams manage ramps and criteria; AI-enforced engineering quality — unit tests, lint/format rules, <b>prompt-loadable skills so any new dev is productive on day one</b>; Playwright integration; global search next.<div class="xtags"><span>React</span><span>TypeScript</span><span>Claude Code</span><span>MCP</span><span>Playwright</span></div></div></div>
+    </div>
+    <div class="xrow">
+      <div class="xhead" role="button" tabindex="0" aria-expanded="false"><span class="xyr">2024—25</span><span class="xrole">Senior Software Engineer III</span><span class="xco tt" data-tt="Saviynt — global leader in identity security & cloud governance (SaaS). Its ISPM product launched at RSA 2025.">Saviynt</span><span class="xplus">+</span></div>
+      <div class="xbody"><div class="xbody-in">Engineered UI for <b>ISPM</b>, Saviynt's flagship identity-security product (RSA 2025). Real-time risk dashboards, <b>Superset self-serve analytics</b>, modular design system, RTL unit suites with <b>Husky</b> quality gates, a11y &amp; performance leadership, mentoring.<div class="xtags"><span>React</span><span>TypeScript</span><span>MUI</span><span>REST</span></div></div></div>
+    </div>
+    <div class="xrow">
+      <div class="xhead" role="button" tabindex="0" aria-expanded="false"><span class="xyr">2022—24</span><span class="xrole">SDE-III → SDE-II</span><span class="xco tt" data-tt="ZEE5 — one of India's biggest OTT streaming platforms (Zee Entertainment), 100M+ users across web, mobile & TV.">Zee · ZEE5</span><span class="xplus">+</span></div>
+      <div class="xbody"><div class="xbody-in">Built the <b>AI ad-generation platform UI</b>; Truecaller &amp; B2B login flows (Tata Play Binge, Vi); custom error tracking; device-ID cost innovation; introduced GraphQL for ~20% faster loads. <b>Team-lead</b> duties: squad planning, reviews, delivery.<div class="xtags"><span>React</span><span>GraphQL</span><span>Node.js</span></div></div></div>
+    </div>
+    <div class="xrow">
+      <div class="xhead" role="button" tabindex="0" aria-expanded="false"><span class="xyr">2021—22</span><span class="xrole">Senior Software Engineer</span><span class="xco tt" data-tt="Spireon — US vehicle-intelligence & fleet-telematics company tracking millions of vehicles and assets.">Spireon</span><span class="xplus">+</span></div>
+      <div class="xbody"><div class="xbody-in">System-wide <b>event dashboard</b> with video monitoring; "Star Driver" analytics; custom reporting engine; owned E2E tests &amp; deployments.<div class="xtags"><span>React</span><span>Next.js</span><span>E2E</span></div></div></div>
+    </div>
+    <div class="xrow">
+      <div class="xhead" role="button" tabindex="0" aria-expanded="false"><span class="xyr">2019—21</span><span class="xrole">Senior Product Engineer</span><span class="xco tt" data-tt="HARMAN (a Samsung company) — connected tech for automotive & enterprise. I served clients Honeywell (aviation ops) & Ingersoll Rand (industrial compressors).">HARMAN</span><span class="xplus">+</span></div>
+      <div class="xbody"><div class="xbody-in"><b>Honeywell</b>: Zurich Airport event tooling — landing, parking, departure with real-time PID comms; a <b>25-engineer program</b> where I owned features end-to-end (React → Node.js) as an IC. <b>Ingersoll Rand</b>: legacy VB rebuilt in React + Electron with animated compressor demos.<div class="xtags"><span>React</span><span>Redux</span><span>Electron</span><span>SQLite</span></div></div></div>
+    </div>
+    <div class="xrow">
+      <div class="xhead" role="button" tabindex="0" aria-expanded="false"><span class="xyr">2017—19</span><span class="xrole">Senior Software Developer</span><span class="xco tt" data-tt="Upside Cloud — healthcare-tech startup. Hospital management systems, clinic booking apps & remote patient care.">Upside Cloud</span><span class="xplus">+</span></div>
+      <div class="xbody"><div class="xbody-in"><b>Hospital management platform</b>: patient onboarding, doctor booking, invoicing, medications, inventory &amp; bed management, remote monitoring, biomedical-waste compliance. Plus a <b>gynecology clinic booking app shipped to the App Store</b>.<div class="xtags"><span>React</span><span>JavaScript</span></div></div></div>
+    </div>
+    <div class="xrow">
+      <div class="xhead" role="button" tabindex="0" aria-expanded="false"><span class="xyr">2016—17</span><span class="xrole">IT Systems &amp; Support Engineer — ITSM · L1</span><span class="xco tt" data-tt="CMS Computers — one of India's large IT-infrastructure & systems-integration companies. My networking foundation.">CMS Computers</span><span class="xplus">+</span></div>
+      <div class="xbody"><div class="xbody-in">Where the discipline began — enterprise IT operations: <b>system provisioning &amp; OS migrations, Java/package rollouts, network troubleshooting</b>, and meeting-room tech ops, end to end. Education: <b>Lovely Professional University</b>. Forever grateful to the mentors and team leads there — <b>they were my AI before the AI era</b>.<div class="xtags"><span>ITSM</span><span>Desktop &amp; Network Ops</span><span>Troubleshooting</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TERMINAL ================= -->
+<section id="shell" class="wrap sp">
+  <p class="kicker">04 — For fellow engineers</p>
+  <h2 class="h2"><span class="lm"><span>Interview my</span></span><span class="lm"><span><em>terminal</em> first.</span></span></h2>
+  <p class="rise" style="color:var(--dim);max-width:560px;margin:-6px 0 26px">A portfolio you can talk to. Click a chip — or type anything. If it can't answer, it routes you straight to the human.</p>
+  <div class="term rise">
+    <div class="tb"><i></i><i></i><i></i><span style="margin-left:10px">riteshh@portfolio: ~ — zsh</span></div>
+    <div class="to" id="to"></div>
+    <div class="ti"><span class="p" style="color:var(--acc)">➜ ~</span><input id="ti" type="text" autocomplete="off" spellcheck="false" placeholder="type 'help'…" aria-label="Terminal input" /></div>
+  </div>
+  <div class="tsug rise d1" id="tsug">
+    <button data-c="whoami">whoami — who is Riteshh?</button>
+    <button data-c="now">now — current role @ eBay</button>
+    <button data-c="ai">ai — my AI workflow</button>
+    <button data-c="skills">skills — the stack</button>
+    <button data-c="experience">experience — career log</button>
+    <button data-c="startups">startups — advisory</button>
+    <button data-c="sudo hire-riteshh">sudo hire-riteshh</button>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="wrap sp">
+  <p class="kicker">05 — Contact</p>
+  <h2 class="h2"><span class="lm"><span>Let's build the</span></span><span class="lm"><span><em>next flagship</em>.</span></span></h2>
+  <div class="cgrid">
+    <div class="rise">
+      <p style="color:var(--dim);max-width:460px;margin-bottom:30px">Open to senior frontend / full-stack roles and consequential products. I do my best work with the <b style="color:var(--ink)">freedom to drive quality</b> — team-first, IC-strong. <b style="color:var(--ink)">Startup founders:</b> if my skills can move your business, I'm listening.</p>
+      <button class="email-big" id="copyMail" aria-label="Copy email address">ritesku3@gmail.com <span aria-hidden="true">⧉</span></button><span class="copied" id="copied">copied ✓</span>
+      <div class="cmeta">
+        <span>LINKEDIN — <b><a href="https://www.linkedin.com/in/riteshh-kumar03/" target="_blank" rel="noopener">/in/riteshh-kumar03</a></b></span>
+        <span>BASE — <b>Bengaluru · IST <span id="clk">--:--</span></b></span>
+        <span>STATUS — <b style="color:var(--ok)">Available for new roles</b></span>
+      </div>
+    </div>
+    <form class="f7 rise d1" id="cf">
+      <div class="fr"><label for="fn">Name</label><input id="fn" type="text" required placeholder="Jane Recruiter" /></div>
+      <div class="fr"><label for="fe">Email</label><input id="fe" type="email" required placeholder="jane@company.com" /></div>
+      <div class="fr"><label for="fs">Subject</label><input id="fs" type="text" required placeholder="Senior Frontend Role" /></div>
+      <div class="fr"><label for="fm">Message</label><textarea id="fm" required placeholder="Tell me about the role…"></textarea></div>
+      <button class="cta cta-solid" type="submit" data-mag>Send message <span class="arr">→</span></button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="fin">
+    <span>© <span id="yy"></span> — <b>RITESHH SHARMA</b></span>
+    <span>DESIGNED &amp; ENGINEERED BY MYSELF · NO TEMPLATES</span>
+    <a href="#hero">TOP ↑</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+'use strict';
+/* ================= preloader ================= */
+var vc=document.getElementById('vc'),veil=document.getElementById('veil'),vv=0;
+var vt=setInterval(function(){vv+=Math.floor(Math.random()*9)+4;if(vv>=100){vv=100;clearInterval(vt)}vc.textContent=(vv<10?'0':'')+vv+' — 100';},60);
+window.addEventListener('load',function(){setTimeout(function(){veil.classList.add('gone')},2150)});
+setTimeout(function(){veil.classList.add('gone')},3400);
+
+/* ================= clock/year ================= */
+document.getElementById('yy').textContent=new Date().getFullYear();
+function tick(){var el=document.getElementById('clk');if(el)el.textContent=new Date().toLocaleTimeString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',hour12:false})}
+tick();setInterval(tick,30000);
+
+/* ================= header ================= */
+var hd=document.getElementById('hd');
+window.addEventListener('scroll',function(){hd.classList.toggle('solid',window.scrollY>60)},{passive:true});
+
+/* ================= mobile menu (sibling overlay — no containing-block traps) ================= */
+var mb=document.getElementById('mb'),mov=document.getElementById('mov');
+function menu(open){mb.classList.toggle('x',open);mov.classList.toggle('on',open);document.body.classList.toggle('lock',open);mb.setAttribute('aria-label',open?'Close menu':'Open menu')}
+mb.addEventListener('click',function(){menu(!mov.classList.contains('on'))});
+mov.addEventListener('click',function(e){if(e.target.closest('a'))menu(false)});
+window.addEventListener('keydown',function(e){if(e.key==='Escape')menu(false)});
+window.addEventListener('resize',function(){if(window.innerWidth>900)menu(false)});
+
+/* ================= cursor ================= */
+var cd=document.getElementById('cdot'),cx=0,cy=0,px=0,py=0;
+window.addEventListener('mousemove',function(e){cx=e.clientX;cy=e.clientY});
+(function cl(){px+=(cx-px)*.2;py+=(cy-py)*.2;cd.style.transform='translate('+px+'px,'+py+'px) translate(-50%,-50%)';requestAnimationFrame(cl)})();
+document.querySelectorAll('a,button,.xhead,input,textarea').forEach(function(el){
+  el.addEventListener('mouseenter',function(){cd.classList.add('grow')});
+  el.addEventListener('mouseleave',function(){cd.classList.remove('grow')});
+});
+
+/* ================= rotating word (typed) ================= */
+var words=['effortless','inevitable','accessible','fast'],rot=document.getElementById('rot'),wi=0,chi=words[0].length,del=true;
+setTimeout(function type(){
+  var cur=words[wi];
+  if(del){chi--;if(chi<=0){del=false;wi=(wi+1)%words.length}}
+  else{chi++;if(chi>=words[wi].length){del=true;rot.textContent=words[wi];return setTimeout(type,2300)}}
+  rot.textContent=(del?cur:words[wi]).slice(0,Math.max(chi,0))||' ';
+  setTimeout(type,del?42:70);
+},2600);
+
+/* ================= client marquee ================= */
+var ct=document.getElementById('ct'),mx2=0,mqsp=.55,mqtg=.55;
+ct.parentElement.addEventListener('mouseenter',function(){mqtg=.08});
+ct.parentElement.addEventListener('mouseleave',function(){mqtg=.55});
+(function mq(){mqsp+=(mqtg-mqsp)*.06;mx2-=mqsp;var half=ct.scrollWidth/2;if(-mx2>=half)mx2+=half;ct.style.transform='translate3d('+mx2+'px,0,0)';requestAnimationFrame(mq)})();
+
+/* ================= reveals ================= */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('inview');io.unobserve(e.target)}})},{threshold:.18});
+document.querySelectorAll('section,.case,.rise,.h2').forEach(function(el){io.observe(el)});
+
+/* ================= counters ================= */
+var cio=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(!e.isIntersecting)return;cio.unobserve(e.target);
+  var b=e.target,t=+b.getAttribute('data-cnt'),i=b.querySelector('i'),v=0;
+  var iv=setInterval(function(){v++;if(v>=t){v=t;clearInterval(iv)}i.textContent=v},1100/t);
+})},{threshold:.5});
+document.querySelectorAll('[data-cnt]').forEach(function(el){cio.observe(el)});
+
+/* ================= parallax on case mockups ================= */
+var shots=[].slice.call(document.querySelectorAll('.shot'));
+var ticking=false;
+function para(){
+  shots.forEach(function(s){
+    var r=s.getBoundingClientRect(),vh=window.innerHeight;
+    if(r.top<vh&&r.bottom>0){
+      var p=(r.top+r.height/2-vh/2)/vh; /* -0.5..0.5 */
+      s.style.translate='0 '+(p*-26)+'px';
+    }
+  });
+  ticking=false;
+}
+window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(para)}},{passive:true});
+
+/* ================= magnetic ctas (desktop) ================= */
+if(window.matchMedia('(hover:hover)').matches){
+  document.querySelectorAll('[data-mag]').forEach(function(b){
+    b.addEventListener('mousemove',function(e){
+      var r=b.getBoundingClientRect();
+      b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.18)+'px,'+((e.clientY-r.top-r.height/2)*.3)+'px)';
+    });
+    b.addEventListener('mouseleave',function(){b.style.transform=''});
+  });
+}
+
+/* ================= experience accordion ================= */
+document.querySelectorAll('.xrow').forEach(function(row){
+  var head=row.querySelector('.xhead'),body=row.querySelector('.xbody');
+  function toggle(){
+    var open=row.classList.toggle('open');
+    head.setAttribute('aria-expanded',open);
+    body.style.maxHeight=open?body.scrollHeight+'px':'0px';
+  }
+  head.addEventListener('click',toggle);
+  head.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle()}});
+});
+
+/* ================= terminal ================= */
+var out=document.getElementById('to'),ti=document.getElementById('ti');
+function L(h){var d=document.createElement('div');d.innerHTML=h;out.appendChild(d);out.scrollTop=out.scrollHeight}
+var C={
+  help:function(){L('<span class="d">commands:</span> <span class="g">whoami</span> · <span class="g">now</span> · <span class="g">ai</span> · <span class="g">skills</span> · <span class="g">experience</span> · <span class="g">projects</span> · <span class="g">startups</span> · <span class="g">contact</span> · <span class="g">sudo hire-riteshh</span> · <span class="g">clear</span><br><span class="d">…or just type your question — I route unknowns to the human.</span>')},
+  whoami:function(){L('<span class="w">Riteshh Sharma</span> — Senior Software Engineer · Bengaluru<br><span class="d">10+ yrs · React / Next.js / TypeScript / GraphQL · currently MTS-1 @ eBay</span>')},
+  skills:function(){L('<span class="g">architecture:</span> React 18, Next.js SSR/ISR, TS strict, design systems<br><span class="g">quality:</span> Core Web Vitals, WCAG a11y, RTL, Husky, E2E, Harness CI/CD<br><span class="g">data:</span> Apache Superset self-serve analytics<br><span class="g">ai&amp;api:</span> GraphQL, Node, Electron, AI product UIs, AI-assisted dev')},
+  experience:function(){L('<span class="d">$ git log --oneline career/</span><br><span class="g">f21ab90</span> eBay — MTS-1 <span class="d">(2025–now · Citadel + AI)</span><br><span class="g">a3f9c2e</span> Saviynt — Sr SWE III <span class="d">(2024–25 · ISPM @ RSA\'25)</span><br><span class="g">7be41d0</span> ZEE5 — SDE-III/II <span class="d">(2022–24 · AI Ads)</span><br><span class="g">c91825f</span> Spireon — Sr SWE <span class="d">(2021–22 · Fleet)</span><br><span class="g">2df03aa</span> HARMAN — Sr Product Eng <span class="d">(2019–21)</span><br><span class="g">98b6c11</span> Upside Cloud — Sr Dev <span class="d">(2017–19)</span><br><span class="g">5a0e77d</span> CMS — Network Eng <span class="d">(2016–17)</span>')},
+  projects:function(){L('<span class="w">01</span> ISPM · <span class="w">02</span> Ads Studio AI · <span class="w">03</span> Fleet Dashboard · <span class="w">04</span> Zurich Airport Ops · <span class="w">05</span> Compressor Suite · <span class="w">06</span> Healthcare')},
+  contact:function(){L('<span class="g">email:</span> ritesku3@gmail.com<br><span class="g">linkedin:</span> /in/riteshh-kumar03')},
+  clear:function(){out.innerHTML=''},
+  now:function(){L('<span class="w">eBay · MTS-1</span> <span class="d">(since Oct 2025)</span> — IC on <span class="w">Citadel</span>: ramp &amp; policy platform (regions, item &amp; shipping criteria).<br><span class="d">AI systems with Claude Opus/Sonnet · quality gates · Playwright · global search next.</span>')},
+  ai:function(){L('<span class="g">daily stack:</span> Claude Code · MCP (Jira, Figma, logs) · Playwright · Copilot→Claude journey<br><span class="d">I build prompt-loadable team skills — new devs productive on day one. AI with discipline: tests, lint, workflow rules.</span>')},
+  startups:function(){L('<span class="w">Founders:</span> I advise &amp; build for early teams — product, frontend architecture, AI workflows.<br><span class="d">If my skills can move your business, write me:</span> <a href="mailto:ritesku3@gmail.com" style="color:var(--acc)">ritesku3@gmail.com</a>')},
+  'sudo hire-riteshh':function(){L('<span class="d">[sudo] password for recruiter: ********</span>');setTimeout(function(){L('<span class="g">✓ permission granted</span> — installing <span class="w">riteshh@9.0.0</span>…')},480);setTimeout(function(){L('<span class="g">✓ done in 0.42s</span> → <a href="mailto:ritesku3@gmail.com" style="color:var(--acc);text-decoration:underline">send offer letter</a>')},1250)}
+};
+function route(q){
+  if(/hire|job|offer|opening|role|vacan/.test(q))return C['sudo hire-riteshh'];
+  if(/ai|claude|copilot|gpt|llm|agent/.test(q))return C.ai;
+  if(/ebay|now|current|citadel|today/.test(q))return C.now;
+  if(/skill|stack|tech|react|typescript|graphql/.test(q))return C.skills;
+  if(/exp|career|history|worked|company|companies/.test(q))return C.experience;
+  if(/project|work|case|portfolio|built/.test(q))return C.projects;
+  if(/startup|advis|founder|business/.test(q))return C.startups;
+  if(/contact|email|mail|whatsapp|call|phone|reach|linkedin/.test(q))return C.contact;
+  if(/\bwho\b|\bwhoami\b|about (you|riteshh|him)|your name|\bintro\b/.test(q))return C.whoami;
+  return null;
+}
+function run(c){L('<span class="p">➜ ~</span> <span class="w">'+c.replace(/</g,'&lt;')+'</span>');var q=c.toLowerCase().trim();var f=C[q]||route(q);if(f)f();else if(c.trim()){L('<span class="d">Interesting question — that one\'s beyond my script, but not beyond Riteshh.</span>');setTimeout(function(){L('→ <a href="mailto:ritesku3@gmail.com?subject='+encodeURIComponent('Question from your portfolio: '+c)+'" style="color:var(--acc);text-decoration:underline">email him this exact question</a> <span class="d">or</span> <a href="https://www.linkedin.com/in/riteshh-kumar03/" target="_blank" style="color:var(--acc);text-decoration:underline">connect on LinkedIn</a> — <span class="d">he replies. Try</span> <span class="g">help</span> <span class="d">for what I can answer here.</span>')},400)}}
+L('<span class="d">Welcome. Type</span> <span class="g">help</span> <span class="d">to explore my profile like a repo.</span>');
+ti.addEventListener('keydown',function(e){if(e.key==='Enter'){run(ti.value);ti.value=''}});
+document.getElementById('tsug').addEventListener('click',function(e){var b=e.target.closest('button');if(b){run(b.getAttribute('data-c'));ti.focus()}});
+
+/* ================= copy email ================= */
+var cm=document.getElementById('copyMail'),cp=document.getElementById('copied');
+cm.addEventListener('click',function(){
+  var t='ritesku3@gmail.com';
+  function done(){cp.classList.add('show');setTimeout(function(){cp.classList.remove('show')},1800)}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){location.href='mailto:'+t})}
+  else{location.href='mailto:'+t}
+});
+
+/* ================= form → mailto ================= */
+document.getElementById('cf').addEventListener('submit',function(e){
+  e.preventDefault();
+  var n=document.getElementById('fn').value,em=document.getElementById('fe').value,s=document.getElementById('fs').value,m=document.getElementById('fm').value;
+  location.href='mailto:ritesku3@gmail.com?subject='+encodeURIComponent(s+' — '+n)+'&body='+encodeURIComponent(m+'\n\n— '+n+' ('+em+')');
+});
+
+/* ================= NOW card typing ================= */
+var np=['ramp & policy platforms across regions','AI-enforced quality gates — tests · lint · rules','prompt-loadable skills: new devs ship on day one','Playwright integration · global search next'];
+var nEl=document.getElementById('nowtype'),ni=0,nc=0,nd=false;
+if(nEl)(function nt(){
+  var cur=np[ni];
+  if(!nd){nc++;nEl.textContent=cur.slice(0,nc);if(nc>=cur.length){nd=true;return setTimeout(nt,2100)}return setTimeout(nt,34)}
+  nc-=3;nEl.textContent=cur.slice(0,Math.max(nc,0));
+  if(nc<=0){nd=false;ni=(ni+1)%np.length}
+  setTimeout(nt,16);
+})();
+
+/* ================= console egg ================= */
+console.log('%c👋 Fellow engineer detected.','font-size:16px;font-weight:bold;color:#e8b380');
+console.log('%cHand-built: zero frameworks, zero templates, one HTML file. Typed reveals, parallax, accordion, terminal — all vanilla.\n→ ritesku3@gmail.com','color:#93908a;font-size:12px;line-height:1.6');
+})();
+</script>
+</body>
+</html>
