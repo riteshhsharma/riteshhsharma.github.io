@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>Riteshh Sharma — Senior Software Engineer · React, Next.js, TypeScript Expert | Bengaluru</title>
 <meta name="description" content="Riteshh Sharma is a Senior Software Engineer in Bengaluru with 10+ years architecting enterprise frontends — React, Next.js, TypeScript, GraphQL. Currently MTS-1 at eBay. Shipped ISPM (Saviynt, RSA 2025), AI ad platforms (ZEE5), fleet intelligence (Spireon)." />
 <meta name="keywords" content="Riteshh Sharma, Senior Software Engineer, React Developer Bengaluru, Next.js Expert, TypeScript, GraphQL, Frontend Architect, AI Engineer, Saviynt ISPM, ZEE5" />
@@ -85,8 +85,8 @@ body::after{content:'';position:fixed;inset:-100%;z-index:400;pointer-events:non
 @media(hover:none){#cdot{display:none}}
 
 /* ---------- header ---------- */
-header{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;justify-content:space-between;align-items:center;padding:22px clamp(20px,5vw,70px);transition:background .4s,padding .4s,border .4s}
-header.solid{background:rgba(18,18,16,.82);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid var(--line2);padding:14px clamp(20px,5vw,70px)}
+header{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;justify-content:space-between;align-items:center;padding:22px clamp(20px,5vw,70px);padding-top:max(22px,env(safe-area-inset-top));transition:background .4s,padding .4s,border .4s}
+header.solid{background:rgba(18,18,16,.96);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid var(--line2);padding:12px clamp(20px,5vw,70px);padding-top:max(12px,env(safe-area-inset-top))}
 .wordmark{font-family:'Fraunces',serif;font-style:italic;font-size:1.35rem;color:var(--ink)}
 .wordmark i{color:var(--acc);font-style:italic}
 .hnav{display:flex;gap:34px;align-items:center}
@@ -103,7 +103,7 @@ header.solid{background:rgba(18,18,16,.82);-webkit-backdrop-filter:blur(16px);ba
 .mb.x span:nth-child(2){opacity:0}
 .mb.x span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
 @media(max-width:900px){.hnav{display:none}.mb{display:flex}}
-#mov{position:fixed;inset:0;background:var(--bg);z-index:310;display:flex;flex-direction:column;justify-content:center;padding:0 9vw;gap:6px;opacity:0;visibility:hidden;transition:.4s}
+#mov{position:fixed;inset:0;background:var(--bg);z-index:310;display:flex;flex-direction:column;justify-content:center;padding:env(safe-area-inset-top) 9vw 0;gap:6px;opacity:0;visibility:hidden;transition:.4s}
 #mov.on{opacity:1;visibility:visible}
 #mov a{font-family:'Fraunces',serif;font-size:clamp(2rem,9vw,3.4rem);border-bottom:1px solid var(--line2);padding:16px 0;display:flex;justify-content:space-between;align-items:center;opacity:0;transform:translateY(20px);transition:.45s}
 #mov.on a{opacity:1;transform:none}
@@ -830,7 +830,7 @@ tick();setInterval(tick,30000);
 
 /* ================= header ================= */
 var hd=document.getElementById('hd');
-window.addEventListener('scroll',function(){hd.classList.toggle('solid',window.scrollY>60)},{passive:true});
+window.addEventListener('scroll',function(){hd.classList.toggle('solid',window.scrollY>6)},{passive:true});
 
 /* ================= mobile menu (sibling overlay — no containing-block traps) ================= */
 var mb=document.getElementById('mb'),mov=document.getElementById('mov');
